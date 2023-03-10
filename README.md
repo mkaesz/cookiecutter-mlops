@@ -1,13 +1,14 @@
 # Cookiecutter MLOps
 
-_A logical, reasonably standardized, but flexible project structure for MLOps._
+_A logical, reasonably standardized, but flexible project structure for MLOps._  
+* This template is presented in my tutorial : [Structuring Your Machine Learning Project with MLOps in Mind]().
+* It is based on the [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science) template.
+* It is updated to meet the MLOps workflow described in my tutorial: [here](https://towardsdatascience.com/a-beginner-friendly-introduction-to-mlops-95282f25325c#aabc).
+* You can find the project in: [Project homepage](https://github.com/Chim-SO/cookiecutter-mlops).
 
 
-#### [Project homepage](https://github.com/Chim-SO/cookiecutter-mlops)
 
-
-### Requirements to use the cookiecutter template:
------------
+###  Requirements to use the cookiecutter template:
  - Python 2.7 or 3.5+
  - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
 
@@ -24,63 +25,60 @@ $ conda install cookiecutter
 
 
 ### To start a new project, run:
-------------
 
     cookiecutter https://github.com/Chim-SO/cookiecutter-mlops
 
 
 ### The resulting directory structure
-------------
-
 The directory structure of your new project looks like this: 
 
 ```
-├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+{{ cookiecutter.repo_name }}/
+├── LICENSE     
+├── README.md                  
+├── Makefile                     # Makefile with commands like `make data` or `make train`                   
+├── configs                      # Config files (models and training hyperparameters)
+│   └── model1.yaml              
 │
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+├── data                         #
+│   ├── external                 # Data from third party sources.
+│   ├── interim                  # Intermediate data that has been transformed.
+│   ├── processed                # The final, canonical data sets for modeling.
+│   └── raw                      # The original, immutable data dump.
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── docs                         # Project documentation.
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+├── models                       # Trained and serialized models.
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+├── notebooks                    # Jupyter notebooks.
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
+├── references                   # Data dictionaries, manuals, and all other explanatory materials.
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── reports                      # Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures                  # Generated graphics and figures to be used in reporting.
 │
-├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data           <- Scripts to download or generate data
-│   │   └── make_dataset.py
-│   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
-│   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
-│   │   ├── predict_model.py
-│   │   └── train_model.py
-│   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│       └── visualize.py
-│
-└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+├── requirements.txt             # The requirements file for reproducing the analysis environment.
+└── src                          # Source code for use in this project.
+    ├── __init__.py              # Makes src a Python module.
+    │
+    ├── data                     # Data engineering scripts.
+    │   ├── build_features.py    
+    │   ├── cleaning.py          
+    │   ├── ingestion.py         
+    │   ├── labeling.py          
+    │   ├── splitting.py         
+    │   └── validation.py        
+    │
+    ├── models                   # ML model engineering (a folder for each model).
+    │   └── model1      
+    │       ├── dataloader.py    
+    │       ├── hyperparameters_tuning.py 
+    │       ├── model.py         
+    │       ├── predict.py       
+    │       ├── preprocessing.py 
+    │       └── train.py         
+    │
+    └── visualization            # Scripts to create exploratory and results oriented visualizations.
+        ├── evaluation.py        
+        └── exploration.py       
 ```
-### Installing development requirements
-------------
-
-    pip install -r requirements.txt
