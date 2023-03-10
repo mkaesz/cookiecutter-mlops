@@ -40,7 +40,7 @@ The directory structure of your new project looks like this:
 ├── configs                      # Config files (models and training hyperparameters)
 │   └── model1.yaml              
 │
-├── data                         #
+├── data                         
 │   ├── external                 # Data from third party sources.
 │   ├── interim                  # Intermediate data that has been transformed.
 │   ├── processed                # The final, canonical data sets for modeling.
