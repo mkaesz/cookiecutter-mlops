@@ -78,7 +78,7 @@ The directory structure of your new project looks like this:
     │       ├── preprocessing.py 
     │       └── train.py         
     │
-    └── visualization            # Scripts to create exploratory and results oriented visualizations.
+    └── visualization        # Scripts to create exploratory and results oriented visualizations.
         ├── evaluation.py        
         └── exploration.py       
 ```
