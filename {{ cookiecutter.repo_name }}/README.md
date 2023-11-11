@@ -48,6 +48,7 @@ Technologies, Frameworks, Services, Tools
 | ML Framework                    | Scikit-Learn                    |
 | ML Algorithm                    | LightGBM, XGBoost               |
 | Hyperparameter Tuning Framework | Optuna                          |
+| Experiment tracking             | Weights and Biases              |
 | Feature Store                   | Hopsworks                       |
 | Model Registry                  | Hopsworks                       |
 | Web Application Framework       | Streamlit                       |
