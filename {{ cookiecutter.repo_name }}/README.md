@@ -3,14 +3,65 @@
 
 {{cookiecutter.description}}
 
+Business Problem
+------------
+
+Quick setup
+------------
+
+1. Export environment variables
+    ```
+    # Bash
+   $ export ABC="asd123"
+    ```
+
+2. Clone the project, cd into the project folder and run
+    ```
+    $ git clone https://github.com/mkaesz/xyz
+    $ cd xyz
+    $ make init
+    ```
+
+## See it in action
+### Hosted on Streamlit Cloud
+- [Live Dashboard with model predictions](https://ml-nyctaxidemandpredictor-benvmeyfusqdlquxsmvnak.streamlit.app/)
+- [Live Dashboard with model monitoring ](https://ml-nyctaxidemandpredictor-ywu8raur4dgutsjodzcap9.streamlit.app/)
+
+### Run it locally
+Model predictions
+
+    $ make frontend
+    
+Model monitoring
+
+    $ make monitoring
+
+Technologies, Frameworks, Services, Tools
+------------
+
+| Category                        | Used in this repo               |
+|---------------------------------|---------------------------------|
+| Language                        | Python 3                        |
+| Dependency Management           | Poetry                          |
+| ML Framework                    | Scikit-Learn                    |
+| ML Algorithm                    | LightGBM, XGBoost               |
+| Hyperparameter Tuning Framework | Optuna                          |
+| Feature Store                   | Hopsworks                       |
+| Model Registry                  | Hopsworks                       |
+| Web Application Framework       | Streamlit                       |
+| Workflow Tool                   | Github Actions                  |
+
+
 Project Organization
 ------------
 
 ```
 {{ cookiecutter.repo_name }}/
+├── .github/workflows            # Github Actions pipelines. Execute the pipelines in src/pipelines.
 ├── LICENSE     
 ├── README.md                  
-├── Makefile                     # Makefile with commands like `make data` or `make train`                   
+├── Makefile                     # Makefile with commands like `make data` or `make train`    
+├── pyproject.toml               # Poetry config file                                    
 ├── configs                      # Config files (models and training hyperparameters)
 │   └── model1.yaml              
 │
@@ -41,8 +92,9 @@ Project Organization
     │   ├── ingestion.py         
     │   ├── labeling.py          
     │   ├── splitting.py         
-    │   └── validation.py        
-    │
+    │   └── validation.py 
+    ├── helpers                  # Helpers and utilities. 
+    │      
     ├── models                   # ML model engineering (a folder for each model).
     │   └── model1      
     │       ├── dataloader.py    
@@ -52,13 +104,16 @@ Project Organization
     │       ├── preprocessing.py 
     │       └── train.py         
     │
-    └── visualization        # Scripts to create exploratory and results oriented visualizations.
+    ├── pipelines                # Pipelines for feature engineering, training and inference.
+    │
+    ├── ui                       # Web applications.
+    │
+    └── visualization            # Scripts to create exploratory and results oriented visualizations.
         ├── evaluation.py        
         └── exploration.py       
 ```
 
+Credits
+------------
 
---------
-<p><small>Project based on the <a target="_blank" href="https://github.com/Chim-SO/cookiecutter-mlops/">cookiecutter MLOps project template</a>
-that is originally based on <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. 
-#cookiecuttermlops #cookiecutterdatascience</small></p>
+Based on a tutorial from Pau Labarta Bajo.
