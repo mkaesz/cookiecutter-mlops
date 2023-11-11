@@ -16,20 +16,20 @@ PYTHON_INTERPRETER = {{ cookiecutter.python_interpreter }}
 
 # downloads Poetry and installs all dependencies from pyproject.toml
 init:
-        curl -sSL https://install.python-poetry.org | python3 -
-        poetry install
+	curl -sSL https://install.python-poetry.org | python3 -
+	poetry install
 
 # generates new batch of features and stores them in the feature store
 features:
-        poetry run python src/pipelines/feature_pipeline.py
+	poetry run python src/pipelines/feature_pipeline.py
 
 # trains a new model and stores it in the model registry
 training:
-        poetry run python src/pipelines/training_pipeline.py
+	poetry run python src/pipelines/training_pipeline.py
 
 # generates predictions and stores them in the feature store
 inference:
-        poetry run python src/pipelines/inference_pipeline.py
+	poetry run python src/pipelines/inference_pipeline.py
 
 
 ## Delete all compiled Python files
