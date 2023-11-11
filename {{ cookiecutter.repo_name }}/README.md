@@ -41,7 +41,8 @@ Technologies, Frameworks, Services, Tools
 
 | Category                        | Used in this repo               |
 |---------------------------------|---------------------------------|
-| Type                            | Batch                     |
+| Type                            | Batch                           |
+| Streaming Framework             | Spark                           |
 | Language                        | Python 3                        |
 | Dependency Management           | Poetry                          |
 | ML Framework                    | Scikit-Learn                    |
