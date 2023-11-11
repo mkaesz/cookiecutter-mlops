@@ -50,7 +50,8 @@ Technologies, Frameworks, Services, Tools
 | Model Registry                  | Hopsworks                       |
 | Web Application Framework       | Streamlit                       |
 | Workflow Tool                   | Github Actions                  |
-
+| Hosting                         | Streamlit Community Cloud       |
+| Serving                         | Streamlit Community Cloud       |
 
 Project Organization
 ------------
