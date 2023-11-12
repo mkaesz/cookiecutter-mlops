@@ -42,6 +42,7 @@ Technologies, Frameworks, Services, Tools
 | Category                        | Used in this repo               |
 |---------------------------------|---------------------------------|
 | Type                            | Batch                           |
+| Datasource                      | CSV                             |
 | Streaming Framework             | Spark                           |
 | Language                        | Python 3                        |
 | Dependency Management           | Poetry                          |
@@ -52,8 +53,8 @@ Technologies, Frameworks, Services, Tools
 | Feature Store                   | Hopsworks                       |
 | Model Registry                  | Hopsworks                       |
 | Web Application Framework       | Streamlit                       |
-| Workflow Tool                   | Github Actions                  |
-| Hosting                         | Streamlit Community Cloud       |
+| Workflow/Orchestration          | Github Actions                  |
+| Hosting/Compute                 | Streamlit Community Cloud       |
 | Serving                         | Streamlit Community Cloud       |
 
 Project Organization
